@@ -1,7 +1,15 @@
 package com.example.testmod
 
-final class Main {
-    static void main(String[] args) {
-        println "Hello world!"
+import pl.olafcio.tedge.IInitializer
+
+final class Main implements IInitializer {
+    static {
+        // This is invoked immediately when the mod is loaded.
+        println "-> Immediate init"
+    }
+
+    void init() {
+        // This is invoked when all mods have been loaded into memory.
+        println "-> Init"
     }
 }
