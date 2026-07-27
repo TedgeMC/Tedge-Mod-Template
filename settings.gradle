@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        flatDir {
+            dirs "tedge"
+        }
+    }
+}
+
+rootProject.name = 'TedgeMod'

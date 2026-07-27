@@ -1,0 +1,30 @@
+import java.nio.file.Files
+
+return { project, projectDir ->
+    project.buildscript {
+        // Tedge Sharp is the gradle addon for creating Tedge mods
+        def tedge_sharp = projectDir.toPath().resolve("build/tedge/Tedge-Sharp-${project.tedge_sharp_version}.jar")
+
+        if (!Files.isRegularFile(tedge_sharp)) {
+            var url = URI.create("https://github.com/TedgeMC/Tedge-Sharp/releases/download/${project.tedge_sharp_version}/Tedge-Sharp-${project.tedge_sharp_version}.jar").toURL()
+            var conn = url.openConnection()
+
+            conn.setDoInput(true)
+            conn.connect()
+
+            try (var src = conn.getInputStream()) {
+                Files.write(tedge_sharp, src.readAllBytes())
+            }
+        }
+
+        repositories {
+            flatDir {
+                dirs "build/tedge"
+            }
+        }
+
+        dependencies {
+            classpath "pl.olafcio.tedge_sharp:Tedge-Sharp:${project.tedge_sharp_version}"
+        }
+    }
+}

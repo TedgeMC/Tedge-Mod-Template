@@ -1,0 +1,30 @@
+buildscript {
+    evaluate(project.file("build_sharp.gradle"))(project, projectDir)
+}
+
+plugins {
+    id 'groovy'
+}
+
+apply plugin: 'tedge_sharp'
+
+group = 'com.example.testmod'
+version = project.version
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:5.0.6'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    minecraft project.minecraft_version
+}
+
+test {
+    useJUnitPlatform()
+}

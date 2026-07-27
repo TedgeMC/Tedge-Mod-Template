@@ -1,0 +1,13 @@
+name       : "ExampleMod"
+description: "Test project made for the Tedge modloader."
+version    : "1.0"
+authors    : ["You"]
+icon       : "assets/examplemod/icon.png"
+license    : "MIT"
+
+load:
+  - com.example.testmod.Main
+
+depends:
+  "tedge"    : "*"
+  "minecraft": "~26.1"

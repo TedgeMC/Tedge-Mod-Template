@@ -1,0 +1,55 @@
+accesseditor v1["on" official]   # <-- used mapping
+               ["mc" 26.1]       # <-- mc version
+
+#==========================================#
+#============ Modifier Changes ============#
+#==========================================#
+# You can tinker with class, method and field modifiers like this:
+#
+#    -final        field  net/minecraft/core/component/DataComponents CUSTOM_DATA
+#    +volatile     field  net/minecraft/core/component/DataComponents CUSTOM_DATA
+#    +synchronized method net/minecraft/core/component/DataComponents bootstrap(Lnet/minecraft/core/Registry;)Lnet/minecraft/core/component/DataComponentType;
+#
+# All Minecraft elements are already public & unsealed (thanks to Tedge Jargen);
+#     however, this doesn't apply to mods/libraries.
+#
+# Note that some modifiers don't support being added, removed or used in any way.
+# Here's a table of them:
+#
+#    | Name         | Addable | Removable | Notes |
+#    |--------------|---------|-----------|-------|
+#    | abstract     | ❌      | 🟡        | Removing only works if no abstract members are found. Adding would cause mod incompatibility. |
+#    | static       | ❌      | ❌        | That would break semantics.                                     |
+#    | sealed       | ❌      | ☑️        | Adding would cause mod incompatibility.                         |
+#    | non-sealed   | ☑️      | ❌        | Removing would cause mod incompatibility.                       |
+#    | final        | ❌      | ☑️        | Fields that weren't public and were final still keep finalness. Adding would cause mod incompatibility. |
+#    | transient    | ☑️      | ☑️        | -                                                               |
+#    | volatile     | ☑️      | ☑️        | -                                                               |
+#    | synchronized | ☑️      | ☑️        | -                                                               |
+#
+# Note that enums are automatically converted to classes, so you can freely construct them to get a new value.
+# Note that modifier changes are not transitive.
+
+#===================================================#
+#============ Interface Implementations ============#
+#===================================================#
+# The following statement would __make a type implement an interface__:
+#
+#    implement net/minecraft/client/ClientBrandRetriever += com/example/testmod/IClientBrandRetriever.groovy
+#
+# Note that if that type won't actually implement that interface, the game will crash.
+# You can either use default methods, or a mixin.
+#
+# Interface implementations are transitive.
+
+#============================================#
+#============ Const Replacements ============#
+#============================================#
+# The following statement would __replace a final field value__:
+#
+#    replace const net/minecraft/client/ClientBrandRetriever VANILLA_NAME = "TestMod"
+#
+# This kind of thing isn't really possible with Java JVM, so all usages of the previous value in that type are replaced with your value.
+# Note that this won't work if multiple constants have this value.
+#
+# Const replacements are transitive.
