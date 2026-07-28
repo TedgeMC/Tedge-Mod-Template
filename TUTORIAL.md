@@ -3,21 +3,39 @@ Tedge is a fresh new Minecraft modloader (straight from the oven).
 Tedge, in many cases, acts just like Fabric.                        <br/>
 However, not everything is the same:
 
+<table>
+<td>
+
 1. **Auto-changed Modifiers**                                          <br/>
    In Tedge, all types, fields and methods of Minecraft are **public**.<br/>
    Most of them are non-final too.
-                                                                       <br/><br/>
+
+</td>
+</table>
+
+<table>
+<td>
+
 2. **Access Editors**                                                  <br/>
    In Tedge, there's no accesswideners nor accesstransformers.         <br/>
    Instead, there are access editors - a great alternative that allows you to do much more.   <br/>
    Take a look at [src/main/resources/tedge.mod.accesseditor.](./src/main/resources/tedge.mod.accesseditor)   <br/><br/>
    *(when you don't specify an accesseditor to use, the modloader searches it for you)*      <br/>
-                                                                       <br/>
+
+</td>
+</table>
+
+<table>
+<td>
+
 3. **YAML Mod File**                                                   <br/>
    In Tedge, mods use a file called `tedge.mod.yaml` to identify themselves.   <br/>
    This, in comparison to Fabric and (Neo)Forge, has many advantages:
    - YAML has comments; JSON doesn't.
    - YAML is easier than TOML.
+
+</td>
+</table>
 
 You might also be asking yourself, *"is there a Tedge API?"*<br/>
 The answer is *yes*, but it wasn't originally made for Tedge; it's called [Avoid Framework.](https://modrinth.com/mod/aovid)
