@@ -1,3 +1,4 @@
+id         : "examplemod"
 name       : "ExampleMod"
 description: "Test project made for the Tedge modloader."
 version    : "1.0"
