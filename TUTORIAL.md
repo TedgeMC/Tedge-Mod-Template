@@ -22,6 +22,10 @@ However, not everything is the same:
 You might also be asking yourself, *"is there a Tedge API?"*<br/>
 The answer is *yes*, but it wasn't originally made for Tedge; it's called [Avoid Framework.](https://modrinth.com/mod/aovid)
 
+## 📗 <font color="#86d72f">Why is the template using Groovy?</font>
+Groovy has better debugging capabilities than all Java implementations I used.<br/>
+You still can switch to Java, if you prefer. [Read this for some more options.](./LANGCOMP.md)
+
 ## What is the whole Tedge infrastructure
 
 Tedge is the modloader itself. This includes the Main wrapper class and the java Agent.<br/>
