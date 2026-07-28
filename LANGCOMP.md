@@ -71,3 +71,13 @@ class ExampleMod : IInitializer {
     }
 }
 ```
+
+## 📐 <font color="#bbbbbc">How to set your language</font>
+
+1. Click on `build.gradle`
+2. In the `plugins` section, replace `groovy` with your chosen language's artifact ID
+3. In the `dependencies` section, replace `implementation 'org.apache.groovy:groovy:5.0.6'` with your chosen language's full maven path
+4. Sync/reload/reopen your project or run any gradle task
+
+Boom, that's it.<br/>
+(The java language is always present too, as it's added by Tedge Sharp.)
