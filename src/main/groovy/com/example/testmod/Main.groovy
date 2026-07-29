@@ -8,6 +8,7 @@ final class Main implements IInitializer {
         println "-> Immediate init"
     }
 
+    @Override
     void init() {
         // This is invoked when all mods have been loaded into memory.
         println "-> Init"
