@@ -16,16 +16,21 @@ accesseditor v1["on" official]   # <-- used mapping
 # Note that some modifiers don't support being added, removed or used in any way.
 # Here's a table of them:
 #
-#    | Name         | Addable | Removable | Notes |
-#    |--------------|---------|-----------|-------|
-#    | abstract     | ❌      | 🟡        | Removing only works if no abstract members are found. Adding would cause mod incompatibility. |
-#    | static       | ❌      | ❌        | That would break semantics.                                     |
-#    | sealed       | ❌      | ☑️        | Adding would cause mod incompatibility.                         |
-#    | non-sealed   | ☑️      | ❌        | Removing would cause mod incompatibility.                       |
-#    | final        | ❌      | ☑️        | Fields that weren't public and were final still keep finalness. Adding would cause mod incompatibility. |
-#    | transient    | ☑️      | ☑️        | -                                                               |
-#    | volatile     | ☑️      | ☑️        | -                                                               |
-#    | synchronized | ☑️      | ☑️        | -                                                               |
+#    | Name            | Addable | Removable |                              Notes                              |
+#    |-----------------|---------|-----------|-----------------------------------------------------------------|
+#    | public          | ☑️      | ❌        | -                                                               |
+#    | protected       | 🟡      | ❌        | This has no effect on public elements.                          |
+#    | private         | ❌      | ❌        | -                                                               |
+#    | package-private | ❌      | ❌        | -                                                               |
+#    | abstract        | ❌      | 🟡        | Removing only works on classes that don't have any abstract methods. Adding would cause mod incompatibility. |
+#    | static          | ❌      | ❌        | That would break semantics.                                     |
+#    | sealed          | ❌      | ☑️        | Adding would cause mod incompatibility.                         |
+#    | non-sealed      | ❗      | ❗        | This modifier doesn't exist in JVM (so every unsealed class is non-sealed). |
+#    | final           | ❌      | ☑️        | Fields that weren't public and were final still keep finalness. Adding would cause mod incompatibility. |
+#    | transient       | ☑️      | ☑️        | -                                                               |
+#    | volatile        | ☑️      | ☑️        | -                                                               |
+#    | synchronized    | ☑️      | ☑️        | -                                                               |
+#    | strictfp        | ☑️      | ❌        | -                                                               |
 #
 # Note that enums are automatically converted to classes, so you can freely construct them to get a new value.
 # Note that modifier changes are not transitive.
@@ -35,12 +40,50 @@ accesseditor v1["on" official]   # <-- used mapping
 #===================================================#
 # The following statement would __make a type implement an interface__:
 #
-#    implement net/minecraft/client/ClientBrandRetriever += com/example/testmod/IClientBrandRetriever.groovy
+#    implement net/minecraft/client/ClientBrandRetriever += com/example/testmod/mixininterface/IXClientBrandRetriever.groovy
 #
 # Note that if that type won't actually implement that interface, the game will crash.
 # You can either use default methods, or a mixin.
 #
 # Interface implementations are transitive.
+
+#===========================================#
+#============ Class Composition ============#
+#===========================================#
+# The following statement would __make a type composite a class__:
+#
+#    composite net/minecraft/client/ClientBrandRetriever += com/example/testmod/mixinextension/CXClientBrandRetriever.groovy
+#
+# Note that this won't actually affect the super class.
+# Note that:
+# - the given extension class cannot be abstract;
+# - the given extension class cannot require any constructor arguments;
+# - the given extension class can cast itself to the target class, however:
+# - the given extension class CANNOT see the target class's members with this#getClass() nor this::class.
+#
+# The given extension class can extend and/or implement anything.
+#
+# This operation is transitive.
+
+#=========================================#
+#============ Class Extending ============#
+#=========================================#
+# The following statement would __make a type "extend" a class__:
+#
+#    extend net/minecraft/client/ClientBrandRetriever += com/example/testmod/mixinextension/EXClientBrandRetriever.groovy
+#
+# Note that, this, in reality, is a transitive mixin annotation-less operation.
+#
+# Note that:
+# - the given extension class must either extend nothing or the target class;
+# - the given extension class cannot require any constructor arguments;
+# - the given extension class cannot be abstract;
+# - the given extension class can cast itself to the target class;
+# - the given extension class can see the target class's members with this#getClass() and this::class.
+#
+# The given extension class can implement anything.
+#
+# This operation is transitive.
 
 #============================================#
 #============ Const Replacements ============#
