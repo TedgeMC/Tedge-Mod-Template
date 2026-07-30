@@ -42,7 +42,7 @@ However, not everything is the same:
 
 4. **Groovy Mixin Support**                                                   <br/>
    In Tedge, mods can write mixins in other JVM languages than Java, if there's a TedgeMixin extension for it!<br/>
-   This cannot be done on Fabric; it may require tweaking your build pipeline on (Neo)Forge.<br/>
+   This cannot be done on Fabric and Forge; NeoForge status is unknown.<br/>
    The TedgeMC team will be working on supporting more languages in mixins, such as Kotlin, soon.
 
 </td>
