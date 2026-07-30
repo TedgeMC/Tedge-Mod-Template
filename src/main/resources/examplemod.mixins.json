@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "refmap": "examplemod.mixins.refmap.json",
+  "package": "com.example.testmod.mixin",
+  "mixins": [
+    "com.example.testmod.MinecraftMixin"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
