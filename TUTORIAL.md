@@ -37,6 +37,17 @@ However, not everything is the same:
 </td>
 </table>
 
+<table>
+<td>
+
+4. **Groovy Mixin Support**                                                   <br/>
+   In Tedge, mods can write mixins in other JVM languages than Java, if there's a TedgeMixin extension for it!<br/>
+   This cannot be done on Fabric; it may require tweaking your build pipeline on (Neo)Forge.<br/>
+   The TedgeMC team will be working on supporting more languages in mixins, such as Kotlin, soon.
+
+</td>
+</table>
+
 You might also be asking yourself, *"is there a Tedge API?"*<br/>
 The answer is *yes*, but it wasn't originally made for Tedge; it's called [Avoid Framework.](https://modrinth.com/mod/aovid)
 
