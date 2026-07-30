@@ -1,6 +1,13 @@
 accesseditor v1["on" official]   # <-- used mapping
                ["mc" 26.1]       # <-- mc version
 
+#
+# Before you read this, here's a few tips:
+# 1. Transitive operation is an operation that other mods, integrating with your mod, can see.
+# 2. JVM is the Java Virtual Machine - basically, the Java interpreter.
+#    Java compiles to its own bytecode, so that's what JVM is for - running it.
+#
+
 #==========================================#
 #============ Modifier Changes ============#
 #==========================================#
