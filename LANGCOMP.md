@@ -2,16 +2,18 @@
 
 # 🔊 <font color="#74a4c5">What language to pick</font>
 
+###### <u>This document is viewed best with IntelliJ IDEA.</u><br/><u>For the best experience, select the 'Preview' mode.</u>
+
 Picking a programming language for your project may be a hard decision.<br/>
 And it is. Here I prepared a table of things to expect from the most popular JVM languages:
 
-| Java-like Syntax                            | Debugging  | Name                                      | Typical usage       | Do I use it | Similar to           | Random cool syntax feature |
-|---------------------------------------------|------------|-------------------------------------------|---------------------|-------------|----------------------|----------------------------|
-| ☑️                                          | 🆗         | [Java](https://java.net)                  | Applications        | Yes         | C++                  | Records                    |
-| ☑️                                          | 😁         | Groovy                                    | Build scripts       | Yes         | JavaScript, Python 2 | String interpolation       |
-| ➗ <font color="#785dc8">*(in half)*</font> | ❓         | [Xtend](https://eclipse.dev/Xtext/xtend/) | Bored Eclipse devs  | Nah         | TypeScript           | Operator overloading       |
-| ✖️                                          | ❓         | Skala                                     | Math (TODO verify)  | Nah         | Python 3, Rust       | Enum cases                 |
-| ✖️                                          | ❓         | Kotlin                                    | Android development | Nah         | C#                   | Inline constructors        |
+| Java-like Syntax                            | Debugging  | Name                                                                                                                                 | Typical usage       | Do I use it | Similar to           | Random cool syntax feature |
+|---------------------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------|----------------------|----------------------------|
+| ☑️                                          | 🆗         | [<span style="color:#0000;background:linear-gradient(180deg, #f8981d, #b83800) text">Java</span >](https://java.net)                 | Applications        | Yes         | C++                  | Records                    |
+| ☑️                                          | 😁         | <span style="color:#0000;background:linear-gradient(180deg,#619cbc,#24444e) text;">Groovy</aspan>                                    | Build scripts       | Yes         | JavaScript, Python 2 | String interpolation       |
+| ➗ <font color="#785dc8">*(in half)*</font> | ❓         | [<span style="color:#0000;background:linear-gradient(180deg, #5a5380, #b9b2c9) text">Xtend</span>](https://eclipse.dev/Xtext/xtend/) | Bored Eclipse devs  | Nah         | TypeScript           | Operator overloading       |
+| ✖️                                          | ❓         | <span style="color:#0000;background:linear-gradient(180deg, #de3423, #380d09) text">Skala</span>                                     | Math (TODO verify)  | Nah         | Python 3, Rust       | Enum cases                 |
+| ✖️                                          | ❓         | <span style="color:#0000;background:linear-gradient(180deg, #dc387e, #af27eb) text">Kotlin</span>                                    | Android development | Nah         | C#                   | Inline constructors        |
 
 Note that some of these languages may have random cool syntax features from others.
 
@@ -19,6 +21,10 @@ Note that some of these languages may have random cool syntax features from othe
 (I recommend Java or Groovy)
 
 ## 📜 <font color="#ffdea7">Code examples</font>
+
+<table>
+<tr>
+<td>
 
 Java
 ```java
@@ -34,6 +40,9 @@ public class ExampleMod implements IInitializer {
 }
 ```
 
+</td>
+<td>
+
 Groovy
 ```groovy
 package com.tuff.examplemod
@@ -48,15 +57,28 @@ class ExampleMod implements IInitializer {
 }
 ```
 
+</td>
+</tr>
+<tr>
+<td>
+
 Xtend
 ```groovy
 //ive no clue
 ```
 
+</td>
+<td>
+
 Skala
 ```groovy
 //no clue either
 ```
+
+</td>
+</tr>
+<tr>
+<td>
 
 Kotlin
 
@@ -71,6 +93,10 @@ class ExampleMod : IInitializer {
     }
 }
 ```
+
+</td>
+</tr>
+</table>
 
 ## 📐 <font color="#bbbbbc">How to set your language</font>
 
