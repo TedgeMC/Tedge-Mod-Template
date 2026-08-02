@@ -56,7 +56,7 @@ However, not everything is the same:
 </table>
 
 You might also be asking yourself, *"is there a Tedge API?"*<br/>
-The answer is *yes*, but it wasn't originally made for Tedge; it's called [Avoid Framework.](https://modrinth.com/mod/aovid)
+The answer is *yes*, but it wasn't originally made for Tedge; it's called [Avoid Framework.](https://modrinth.com/mod/avoid)
 
 ## 📗 <font color="#86d72f">Why is the template using Groovy?</font>
 Groovy has better debugging capabilities than all Java implementations I used.<br/>
