@@ -3,9 +3,9 @@
   "refmap": "examplemod.mixins.refmap.json",
   "package": "com.example.testmod.mixin",
   "mixins": [
-    "com.example.testmod.MinecraftMixin"
   ],
   "client": [
+    "MinecraftMixin"
   ],
   "minVersion": "0.8",
   "injectors": {
