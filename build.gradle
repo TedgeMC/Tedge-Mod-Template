@@ -11,6 +11,10 @@ apply plugin: 'tedge_sharp'
 group = 'com.example.testmod'
 version = project.version
 
+tedge {
+    accessEditor = project.files("src/main/resources/tedge.mod.accesseditor")
+}
+
 repositories {
     mavenCentral()
 }
