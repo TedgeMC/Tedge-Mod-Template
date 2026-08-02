@@ -125,5 +125,7 @@ Here's the order in which, what happens when you sync your project after adding 
     </div>
 </div>
 
+###### <i>Gradle dependency applying steps are skipped.</i>
+
 Tedge Sharp and Tedge Launcher are designed for dev environments.<br/>
 Tedge and Tedge Jargen however are an essential part of the lifecycle.
