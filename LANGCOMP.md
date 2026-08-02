@@ -63,8 +63,16 @@ class ExampleMod implements IInitializer {
 <td>
 
 Xtend
-```groovy
-//ive no clue
+```kotlin
+package com.tuff.examplemod
+
+import pl.olafcio.tedge.IInitializer
+
+class ExampleMod implements IInitializer {
+    override def init() {
+        IO.println("Loaded ExampleMod =D")
+    }
+}
 ```
 
 </td>
