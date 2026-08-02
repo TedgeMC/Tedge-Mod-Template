@@ -80,7 +80,11 @@ class ExampleMod implements IInitializer {
 
 Skala
 ```groovy
-//no clue either
+import pl.olafcio.tedge.IInitializer
+
+class ExampleMod implements IInitializer:
+    override def init()
+        println("Loaded ExampleMod =D")
 ```
 
 </td>
