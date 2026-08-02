@@ -6,7 +6,7 @@ However, not everything is the same:
 <table>
 <td>
 
-1. **Auto-changed Modifiers**                                          <br/>
+1. **Default Modifiers**                                               <br/>
    In Tedge, all types, fields and methods of Minecraft are **public**.<br/>
    Most of them are non-final too.
 
