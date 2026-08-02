@@ -72,10 +72,17 @@ Tedge Launcher is the tool used to download Minecraft, use Tedge Jargen to trans
 Here's the order in which, what happens when you sync your project after adding Tedge Sharp:
 
 <style>
-    .diagram-block {background:#10487f;border:1px solid #fff3;width:fit-content;padding:9px 15px;line-height:15px}
+    .diagram-block {
+        background:#10487f;
+        border:1px solid #fff3;
+        width:fit-content;
+        height:fit-content;
+        padding:9px 15px;
+        line-height:15px
+    }
 </style>
 
-<div align="center">
+<div align="center" style="position: relative">
     <div class="diagram-block">Tedge Sharp starts up</div>
     <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px">
         <path d="M10 8L14 8V10L8 16L2 10V8H6V0L10 4.76995e-08V8Z" fill="#10487f"/>
@@ -89,12 +96,25 @@ Here's the order in which, what happens when you sync your project after adding 
     <div style="display: flex; justify-content: center;gap: 8px;translate:8px">
         <div class="diagram-block">Tedge Launcher downloads the Minecraft JAR</div>
         <div class="diagram-block">Tedge Launcher downloads the Minecraft libraries</div>
+        <div style="position: absolute;translate:150px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px;translate:-25px 35px; transform: scale(3); transform-origin: top">
+                <path xmlns="http://www.w3.org/2000/svg" d="M6 16H5L0 11L5 6H6V10H12V1H14V12H6V16Z" fill="#10487f"/>
+            </svg>
+        </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px;translate:-165px 0">
         <path d="M10 8L14 8V10L8 16L2 10V8H6V0L10 4.76995e-08V8Z" fill="#10487f"/>
     </svg>
-    <div style="display: flex; justify-content: center;gap: 8px">
+    <div style="display: flex; justify-content: center;gap: 8px;translate:-165px 0">
         <div class="diagram-block">Tedge Jargen transforms the Minecraft JAR</div>
+    </div>
+    <div style="display: flex; justify-content: center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px;rotate:-45deg">
+            <path d="M10 8L14 8V10L8 16L2 10V8H6V0L10 4.76995e-08V8Z" fill="#10487f"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px;rotate:45deg">
+            <path d="M10 8L14 8V10L8 16L2 10V8H6V0L10 4.76995e-08V8Z" fill="#10487f"/>
+        </svg>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 16 16" fill="none" style="margin-block:15px 5px">
         <path d="M10 8L14 8V10L8 16L2 10V8H6V0L10 4.76995e-08V8Z" fill="#10487f"/>
