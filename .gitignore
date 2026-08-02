@@ -8,6 +8,10 @@ build/
 ### Tedge ###
 run/
 
+### Java ###
+hs_err_pid*.log
+replay_pid*.log
+
 ### IntelliJ IDEA ###
 .idea/
 .idea/modules.xml
