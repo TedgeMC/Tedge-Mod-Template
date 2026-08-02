@@ -1,0 +1,34 @@
+{
+  required: true,
+  refmap: "examplemod.mixins.refmap.json",
+  package: "com.example.testmod.mixin",
+
+  //
+  // Mixins for both the server, and the client, go here.
+  //
+  mixins: [
+  ],
+
+  //
+  // Mixins that should only load on the client go here.
+  //
+  client: [
+    "MinecraftMixin"
+  ],
+
+  //
+  // You can also optionally add a 'server' property,
+  // that includes server-only mixins.
+  //
+  // This however is heavily unrecommended, as a client
+  // can also start up a server.
+  //
+  // Therefore a better approach is checking object ownership.
+  // E.g. Entity#level().isClient()
+  //
+
+  minVersion: "0.8",
+  injectors: {
+    defaultRequire: 1
+  }
+}
